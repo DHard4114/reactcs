@@ -2,6 +2,7 @@ import { FaDiscord, FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import logo from '../assets/neon-brand-assets/neon-brand-assets/logo/dark-background/mono.svg';
 
 export default function Footer() {
     const [isVisible, setIsVisible] = useState(false);
@@ -35,7 +36,7 @@ export default function Footer() {
                     <div className="py-4 flex justify-center">
                         <Link to="/">
                             <img
-                                src="./src/assets/neon-brand-assets/neon-brand-assets/logo/dark-background/mono.png"
+                                src= {logo}
                                 alt="Neon Tech Logo"
                                 className="w-28 md:w-32 h-auto transition hover:brightness-110"
                             />
