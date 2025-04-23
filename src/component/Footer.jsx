@@ -35,7 +35,7 @@ export default function Footer() {
                     <div className="py-4 flex justify-center">
                         <Link to="/">
                             <img
-                                src="./src/assets/neon-brand-assets/neon-brand-assets/logo/dark-background/mono.svg"
+                                src="./src/assets/neon-brand-assets/neon-brand-assets/logo/dark-background/mono.png"
                                 alt="Neon Tech Logo"
                                 className="w-28 md:w-32 h-auto transition hover:brightness-110"
                             />
