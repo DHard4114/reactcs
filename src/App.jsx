@@ -1,14 +1,22 @@
+import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
+import Pricing from "./pages/Pricing";
+import Solution from "./pages/Solution";
+import Docs from "./pages/Docs";
+import About from "./pages/About";
 
 function App() {
-
   return (
-    <>
-    <div className="w-full min-h-screen bg-[#1F1F21]">
-      <Home />
+    <div className="w-full min-h-screen bg-[#0A0A0A]">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/pricing" element={<Pricing />} />
+        <Route path="/solution" element={<Solution />} />
+        <Route path="/docs" element={<Docs />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
     </div>
-    </>
-  )
+  );
 }
 
 export default App;
