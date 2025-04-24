@@ -84,15 +84,41 @@ export default function Footer() {
 
                 {/* Social */}
                 <div>
-                    <h3 className="text-white font-bold mb-3">SOCIAL</h3>
-                    <ul className="space-y-2 text-gray-400">
-                        <li className="flex items-center gap-2"><FaDiscord /> Discord</li>
-                        <li className="flex items-center gap-2"><FaGithub /> GitHub</li>
-                        <li className="flex items-center gap-2"><FaXTwitter /> x.com</li>
-                        <li className="flex items-center gap-2"><FaLinkedin /> LinkedIn</li>
-                        <li className="flex items-center gap-2"><FaYoutube /> YouTube</li>
+                    <h3 className="text-white font-bold mb-4 tracking-wide">SOCIAL</h3>
+                    <ul className="space-y-3 text-gray-300">
+                        <li className="flex items-center gap-3 hover:text-cyan-400 transition duration-300">
+                            <FaDiscord className="text-cyan-400 drop-shadow-neon" />
+                            <a href="https://discord.com/invite/92vNTzKDGp" target="_blank" rel="noopener noreferrer">
+                                Discord
+                            </a>
+                        </li>
+                        <li className="flex items-center gap-3 hover:text-purple-400 transition duration-300">
+                            <FaGithub className="text-purple-400 drop-shadow-neon" />
+                            <a href="https://github.com/neondatabase/neon" target="_blank" rel="noopener noreferrer">
+                                GitHub
+                            </a>
+                        </li>
+                        <li className="flex items-center gap-3 hover:text-blue-400 transition duration-300">
+                            <FaXTwitter className="text-blue-400 drop-shadow-neon" />
+                            <a href="https://x.com/neondatabase/" target="_blank" rel="noopener noreferrer">
+                                x.com
+                            </a>
+                        </li>
+                        <li className="flex items-center gap-3 hover:text-blue-600 transition duration-300">
+                            <FaLinkedin className="text-blue-600 drop-shadow-neon" />
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                LinkedIn
+                            </a>
+                        </li>
+                        <li className="flex items-center gap-3 hover:text-red-500 transition duration-300">
+                            <FaYoutube className="text-red-500 drop-shadow-neon" />
+                            <a href="https://www.youtube.com/channel/UCoMzQTJSIr7-RU1QbomQI2w" target="_blank" rel="noopener noreferrer">
+                                YouTube
+                            </a>
+                        </li>
                     </ul>
                 </div>
+
 
                 {/* Compliance */}
                 <div>
