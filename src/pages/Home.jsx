@@ -1,8 +1,10 @@
+// Home.jsx
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import Card from '../component/Card';
 
 function Home() {
+    // Display Array
     const boxes = [
         "Serverless Speed. Neon Simplicity.",
         "Built for Scale. Powered by Postgres.",
@@ -21,18 +23,11 @@ function Home() {
                 <p className="text-lg font-mono md:text-xl text-gray-300 max-w-2xl mx-auto mb-16">
                     A blazing-fast, serverless experience for developers who move fast and ship faster.
                 </p>
+
+                {/* Mapping Display */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
                     {boxes.map((text, idx) => (
-                        <motion.div
-                            key={idx}
-                            className="bg-[#1A1A1A] p-6 rounded-xl border border-[#2A2A2A] shadow-lg font-mono"
-                            whileHover={{ scale: 1.05, borderColor: '#00E599' }}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: idx * 0.1 }}
-                        >
-                            <p className="text-lg font-medium tracking-wide">{text}</p>
-                        </motion.div>
+                        <Card key={idx} text={text} idx={idx} />
                     ))}
                 </div>
 

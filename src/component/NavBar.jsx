@@ -17,7 +17,7 @@ function NavBar() {
                 setMobileMenuOpen(false);
             }
         };
-
+        
         window.addEventListener('resize', handleResize);
 
         return () => {

@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [error, setError] = useState('');
-    const [loading, setLoading] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    
 
     const handleKeyDown = (e) => {
         if (e.key === 'Enter') {
@@ -14,19 +14,23 @@ const Login = () => {
     };
 
     const handleSignIn = () => {
-        setLoading(true);
+        setIsLoggedIn(true);
         setTimeout(() => {
-        setError("Ini hanya contoh UI, tidak ada autentikasi");
-        setLoading(false);
+        setIsLoggedIn(false);
         }, 1000);
     };
+
+    useEffect(() => {
+        if(isLoggedIn) {
+            alert("Berhasil Login!");
+        }
+    }), [isLoggedIn];
 
     return (
         <div className="w-full flex items-center justify-center min-h-screen bg-[#0A0A0A] p-4 font-lato">
         <div className="max-w-md w-full bg-white rounded-sm p-5 border border-gray-200">
             <h2 className="text-xl font-mono text-gray-800 text-center mb-3 tracking-wide">Login</h2>
 
-            {error && <p className="text-red-500 text-sm text-center mb-3">{error}</p>}
 
             <div className="space-y-3">
             <div>
@@ -59,17 +63,17 @@ const Login = () => {
 
             <button
                 onClick={handleSignIn}
-                disabled={loading}
+                disabled={isLoggedIn}
                 className="w-full bg-[#141414] text-white font-mono py-2 rounded-sm hover:bg-gray-900 transition-all"
             >
-                {loading ? "Loading..." : "Login"}
+                {isLoggedIn ? "Loading..." : "Login"}
             </button>
 
             <p className="text-center text-sm">
-                Belum punya akun? <Link to="/auth/signup" className="text-blue-500">Daftar</Link>
+                Belum punya akun? <Link to="/authentication/signup" className="text-blue-500">Daftar</Link>
             </p>
             <p className="text-center text-sm">
-                <Link to="/auth/password/repass" className="text-blue-500">Forgot Password?</Link>
+                <Link to="/authentication/repass" className="text-blue-500">Forgot Password?</Link>
             </p>
             </div>
         </div>
